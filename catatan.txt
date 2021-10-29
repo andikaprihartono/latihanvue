@@ -1,0 +1,21 @@
+input script di Head untuk menghubungkan ke vue. 
+<script src="https://unpkg.com/vue@next" defer></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+==================================================================================
+{{message}}
+{{ }} = mustache syntax ,untuk memanggil variable yg ada di vue.
+message = binding 
+
+=======================================================================================
+v-for="option in options"
+
+v-for = untuk melooping (for)
+option = Parameter dari for in
+options = parameter yang didapat dari javascript 
+
+:id="option.value"
+:id = :(titik dua)digunakan untuk menginisialisakan di vue
+======================================================================================
+Vue.createApp(App).mount('#app')
+syntax yang digunakan untuk menjalankan vue di javascript
+ 

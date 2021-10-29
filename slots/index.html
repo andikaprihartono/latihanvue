@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h3>Let's trigger this here modal!</h3>
+        <button @click="toggleShow">
+            <span v-if="isShowing">Hide Child</span>
+            <span v-else>Show child</span>
+        </button>
+
+    <app-modal v-if="isShowing">
+        <h2>Here I am!</h2>
+        <button @click="toggleShow">
+            Close
+        </button>
+    </app-modal>    
+    </div>
+    <script type="text/x-template">
+
+    </script>
+</body>
+</html>

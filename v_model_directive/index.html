@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Directive</title>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body >
+    <div id="app">
+        <div >
+            <h3>Type here:</h3>
+            <textarea v-model="message" class="message" maxlength="72" rows="10"></textarea>
+            <br>
+            <p class="booktext">{{message}}</p>
+        </div>
+    
+        <span v-for="option in options">
+            <input v-model="checkedNames"
+            :id="option.value"
+            :value="option.value"
+            type="checkbox">
+            <label for="option.value">{{option.value}}</label>
+        </span>
+        <br>
+        <span>Checked names:{{checkedNames}}</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watcher Solution</title>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="getTaco">
+            click me to order a taco 
+        </button>
+        <h2> {{orderstatus}}</h2>
+        <p v-if="ordersubmitted">{{ordersubmitted}}</p>
+<!-- <div>
+
+</div> -->
+    </div>
+</body>
+</html>

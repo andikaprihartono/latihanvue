@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF </title>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h3>What is your favorite kind of taco?</h3>
+        <textarea v-model="tacos" ></textarea>
+        <br>
+        <button v-if="tacos" type="submit">
+Let us know!
+        </button>
+
+        <input v-model="tacos" value="yes" type="radio" id="yes"/>
+        <label for="no">yes</label> <br>
+        <input v-model="tacos" value="no" type="radio" id="no"/>
+<p v-if="tacos=== 'yes'"> Sip </p>
+<p v-else-if="tacos==='no">not sip</p>
+
+    </div>
+</body>
+</html>

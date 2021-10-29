@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Properties</title>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="https://unpkg.com/sweetalert2@8.13.5/dist/sweetalert2.all.js"></script>
+   
+
+</head>
+<body>
+    <div id="app">
+        <select id="kota" @change="praytime()" >
+            <option 
+            v-for="city in cities"
+             :value="city.id ">{{city.nama}}
+            </option>
+        </select>
+
+        <select id="ayat" >
+            <option v-for="surahs in surah"
+             :value=""></option>
+        </select>
+
+        <input id="date" v-model="date" type="date">
+        <!--<button @click="praytime">Shalat</button>-->
+
+        <h3 v-if="Object.keys(jadwal).length==0" >Isi Dulu</h3>
+        <table v-else>
+            <tr>
+                <td>Ashar :</td>
+                <td>{{jadwal.ashar}}</td>
+                <td>Dhuha :</td>
+                <td>{{jadwal.dhuha}}</td>
+                <td>Dzuhur :</td>
+                <td>{{jadwal.dzuhur}}</td>
+                <td>Imsak :</td>
+                <td>{{jadwal.imsak}}</td>
+                <td>Magrib :</td>
+                <td>{{jadwal.maghrib}}</td>
+                <td>Subuh :</td>
+                <td>{{jadwal.subuh}}</td>
+            </tr>
+        </table>
+      </div> 
+</body>
+</html>

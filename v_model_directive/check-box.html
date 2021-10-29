@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check_box
+
+    </title>
+
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <input v-model="checkedNames" type="checkbox" id="john" value="John"/>
+        <label for="john"></label>
+
+        <input v-model="checkedNames" type="checkbox" id="paul" value="Paul"/>
+        <label for="paul">Paul</label>
+
+        <input v-model="checkedNames" type="checkbox" id="george" value="George"/>
+        <label for="george">George</label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Search</title>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <h3>Search a title: <input v-model="filterText" /></h3>
+        <h3>Sort titles by: 
+          <button @click="sortLowest">Lowest Rated</button>
+          <button @click="sortHighest">Highest Rated</button>
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th v-for="key in columns">
+                {{ key }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="entry in filteredFilms">
+              <td v-for="key in columns">
+                {{entry[key]}}
+              </td>
+            </tr>
+          <tbody>
+        </table>
+      </div>  
+</body>
+</html>
